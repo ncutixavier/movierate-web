@@ -20,7 +20,7 @@ class Login extends Component {
 
     loginClicked = event => {
         if (this.state.isLogin) {
-            fetch(`${process.env.REACT_APP_API_URL}//auth/`, {
+            fetch(`${process.env.REACT_APP_API_URL}/auth/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(this.state.credentials)
@@ -32,7 +32,7 @@ class Login extends Component {
                 })
                 .catch(error => console.log(error))
         } else {
-            fetch(`${process.env.REACT_APP_API_URL}/api/users/`, {
+            fetch(`${process.env.REACT_APP_API_URL}api/users/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(this.state.credentials)
