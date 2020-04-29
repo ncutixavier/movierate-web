@@ -17,7 +17,7 @@ class App extends Component {
   componentDidMount() {
     if (this.state.token) {
       //fetch data
-      fetch(`${process.env.REACT_APP_API_URL}api/movies/`, {
+      fetch(`${process.env.REACT_APP_API_URL}/api/movies/`, {
         method: 'GET',
         headers: {
           'Authorization': `Token 	${this.state.token}`

@@ -12,7 +12,7 @@ function MovieList(props) {
     }
 
     const removeClicked = movie => {
-        fetch(`${process.env.REACT_APP_API_URL}api/movies/${movie.id}/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/movies/${movie.id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

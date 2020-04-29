@@ -16,7 +16,7 @@ class MovieForm extends Component {
     }
     updateClicked = () => {
         console.log(this.state.editedMovie)
-        fetch(`${process.env.REACT_APP_API_URL}api/movies/${this.props.movie.id}/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/movies/${this.props.movie.id}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ class MovieForm extends Component {
     }
     saveClicked = () => {
         console.log(this.state.editedMovie)
-        fetch(`${process.env.REACT_APP_API_URL}api/movies/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/movies/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
